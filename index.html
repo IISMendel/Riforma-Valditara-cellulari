@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le nuove regole per il cellulare a scuola</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
@@ -74,7 +75,25 @@
 </head>
 <body class="antialiased">
 
-    
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-stone-800">Le nuove regole per il cellulare a scuola</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#circolare" class="nav-link text-stone-600 hover:text-teal-700 px-3 py-2 rounded-md text-sm font-medium border-b-2 border-transparent">La Circolare</a>
+                        <a href="#riforme" class="nav-link text-stone-600 hover:text-teal-700 px-3 py-2 rounded-md text-sm font-medium border-b-2 border-transparent">Le Riforme</a>
+                        <a href="#impatto" class="nav-link text-stone-600 hover:text-teal-700 px-3 py-2 rounded-md text-sm font-medium border-b-2 border-transparent">Cosa Cambia</a>
+                        <a href="#perche" class="nav-link text-stone-600 hover:text-teal-700 px-3 py-2 rounded-md text-sm font-medium border-b-2 border-transparent">Il Perché</a>
+                        <a href="#altre-riforme" class="nav-link text-stone-600 hover:text-teal-700 px-3 py-2 rounded-md text-sm font-medium border-b-2 border-transparent">Altre Riforme</a>
+                        <a href="#faq" class="nav-link text-stone-600 hover:text-teal-700 px-3 py-2 rounded-md text-sm font-medium border-b-2 border-transparent">FAQ</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
 
@@ -83,12 +102,6 @@
             <p class="max-w-3xl mx-auto text-lg text-stone-600">
                 L'anno scolastico 2025/2026 introduce un pacchetto di riforme per rafforzare la disciplina, la concentrazione e il merito. Scopri le principali novità, a partire dalla nuova gestione dei cellulari in classe.
             </p>
-            <p class="max-w-3xl mx-auto mt-4 text-md text-stone-700">
-                Con questa pagina web, esplorerai in modo semplice e diretto le principali novità introdotte dalla circolare del Ministro Valditara. Oltre al divieto di cellulari a scuola, troverai informazioni sul nuovo voto di condotta, le sanzioni e le riforme per la Maturità, per comprendere appieno l'impatto di questi cambiamenti.
-            </p>
-            <div class="flex justify-center mt-12">
-                <a href="https://raw.githubusercontent.com/username/repo/branch/percorso/della/pagina-completa.html" target="_blank" class="px-6 py-3 bg-teal-600 text-white rounded-full font-semibold shadow-md hover:bg-teal-700 transition">Apri a tutta pagina per avere tutte le informazioni</a>
-            </div>
         </section>
 
         <section id="circolare" class="mb-20 scroll-mt-20">
@@ -139,6 +152,30 @@
                 </div>
             </div>
         </section>
+        
+        <section id="altre-riforme" class="mb-20 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-stone-800">Altri Punti Chiave della Circolare</h3>
+                <p class="mt-2 text-md text-stone-500">Oltre alle riforme principali, la circolare tocca anche altri aspetti fondamentali per l'educazione e la formazione degli studenti.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md border border-stone-200 text-center">
+                    <div class="text-4xl mb-4 text-teal-600">📚</div>
+                    <h4 class="font-bold text-xl mb-2">Educazione Civica</h4>
+                    <p class="text-stone-600">Le nuove disposizioni ministeriali rafforzano l'importanza dell'insegnamento dell'educazione civica. L'uso responsabile dei dispositivi digitali e la consapevolezza del proprio ruolo nella società digitale rientrano pienamente in questo ambito educativo.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-stone-200 text-center">
+                    <div class="text-4xl mb-4 text-teal-600">🤖</div>
+                    <h4 class="font-bold text-xl mb-2">Intelligenza Artificiale</h4>
+                    <p class="text-stone-600">La circolare dedica una notevole attenzione all'uso dell'Intelligenza Artificiale nelle attività didattiche. La scuola è chiamata a promuoverne un uso etico e consapevole, garantendo che gli studenti ne comprendano le potenzialità e i rischi.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-stone-200 text-center">
+                    <div class="text-4xl mb-4 text-teal-600">💻</div>
+                    <h4 class="font-bold text-xl mb-2">Potenziamento del Digitale</h4>
+                    <p class="text-stone-600">Nonostante il divieto sui cellulari, la circolare ribadisce l'importanza di sfruttare gli strumenti digitali forniti dalla scuola per migliorare la qualità degli insegnamenti e favorire l'apprendimento, valorizzando gli investimenti già fatti.</p>
+                </div>
+            </div>
+        </section>
 
         <section id="impatto" class="mb-20 scroll-mt-20">
             <div class="text-center mb-12">
@@ -151,6 +188,36 @@
                 <button class="role-btn px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold border-2 border-teal-600 text-teal-700 transition" data-role="docente">Docente</button>
             </div>
             <div id="role-content" class="bg-white p-8 rounded-lg shadow-md border border-stone-200 max-w-4xl mx-auto">
+            </div>
+        </section>
+
+        <section id="perche" class="mb-20 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-stone-800">Il Perché del Cambiamento: I Dati Ufficiali</h3>
+                <p class="mt-2 text-md text-stone-500">La decisione di limitare l'uso dei dispositivi si basa su evidenze scientifiche. I dati mostrano una situazione che richiede un intervento educativo per la tutela del benessere degli studenti.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md border border-stone-200">
+                    <h4 class="text-lg font-semibold text-center mb-4">Impatto su Rendimento e Benessere</h4>
+                    <div class="chart-container">
+                        <canvas id="performanceChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-stone-200">
+                    <h4 class="text-lg font-semibold text-center mb-4">Uso Problematico dei Dispositivi</h4>
+                    <div class="chart-container">
+                        <canvas id="addictionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="mb-20 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-stone-800">Domande Frequenti</h3>
+                <p class="mt-2 text-md text-stone-500">Risposte chiare alle domande più comuni sulla nuova circolare.</p>
+            </div>
+            <div id="faq-list" class="bg-white rounded-lg shadow-md border border-stone-200 max-w-4xl mx-auto">
             </div>
         </section>
 
@@ -201,6 +268,25 @@
                 }
             };
 
+            const faqData = [
+                {
+                    question: 'Il divieto vale anche durante la ricreazione?',
+                    answer: 'Sì, la circolare estende il divieto di utilizzo del cellulare all’intero orario scolastico, incluse le pause. Questo mira a favorire l\'interazione sociale diretta e a ridurre la distrazione digitale per tutto il tempo trascorso a scuola.'
+                },
+                {
+                    question: 'Cosa succede se uno studente viola il divieto?',
+                    answer: 'La violazione del divieto è considerata un\'infrazione disciplinare. Le sanzioni specifiche sono definite dal Regolamento d\'Istituto, ma la circolare sottolinea che il comportamento influirà sul voto di condotta, che ora ha un peso maggiore sul percorso di studi e sui crediti per la Maturità.'
+                },
+                {
+                    question: 'Gli studenti con disturbi dell’apprendimento possono usare il cellulare?',
+                    answer: 'Sì, la circolare prevede specifiche eccezioni. L\'uso del cellulare è consentito solo se è previsto nel Piano Educativo Individualizzato (PEI) o nel Piano Didattico Personalizzato (PDP) come ausilio per l\'apprendimento.'
+                },
+                {
+                    question: 'I docenti possono usare il cellulare in classe?',
+                    answer: 'La circolare si rivolge principalmente agli studenti. Per i docenti, l\'uso del cellulare è consentito per motivi didattici o professionali, a patto che non comprometta il decoro e l\'efficacia dell\'insegnamento.'
+                }
+            ];
+
             const roleButtons = document.querySelectorAll('.role-btn');
             const roleContentContainer = document.getElementById('role-content');
             
@@ -222,6 +308,140 @@
             });
 
             updateRoleContent('studente');
+
+            const faqListContainer = document.getElementById('faq-list');
+            faqData.forEach((item, index) => {
+                const faqItem = document.createElement('div');
+                faqItem.classList.add('faq-item');
+                faqItem.innerHTML = `
+                    <div class="faq-question">
+                        <span>${item.question}</span>
+                        <svg class="faq-arrow w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="faq-answer text-stone-600">
+                        <p>${item.answer}</p>
+                    </div>
+                `;
+                faqListContainer.appendChild(faqItem);
+
+                faqItem.querySelector('.faq-question').addEventListener('click', () => {
+                    faqItem.classList.toggle('active');
+                });
+            });
+
+            const performanceCtx = document.getElementById('performanceChart').getContext('2d');
+            const performanceChart = new Chart(performanceCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Rischio Bocciatura (Uso Eccessivo)', 'Disturbi del Sonno', 'Calo Punteggi PISA (Correlazione)'],
+                    datasets: [{
+                        label: 'Impatto Negativo (%)',
+                        data: [200, 38, 15],
+                        backgroundColor: [
+                            'rgba(221, 107, 32, 0.6)',
+                            'rgba(49, 151, 149, 0.6)',
+                            'rgba(113, 128, 150, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgba(221, 107, 32, 1)',
+                            'rgba(49, 151, 149, 1)',
+                            'rgba(113, 128, 150, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value, index, values) {
+                                    if (index === 0) return value + 'x';
+                                    return value + '%';
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.x !== null) {
+                                        if (context.label === 'Rischio Bocciatura (Uso Eccessivo)') {
+                                            label += 'Rischio triplicato (+200%)';
+                                        } else if (context.label === 'Calo Punteggi PISA (Correlazione)') {
+                                            label += `Correlazione con un calo del ${context.parsed.x}% (valore indicativo)`;
+                                        } else {
+                                            label += `${context.parsed.x}% degli studenti`;
+                                        }
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const addictionCtx = document.getElementById('addictionChart').getContext('2d');
+            const addictionChart = new Chart(addictionCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Uso problematico', 'Uso non problematico'],
+                    datasets: [{
+                        data: [25, 75],
+                        backgroundColor: ['rgba(49, 151, 149, 0.6)', 'rgba(229, 231, 235, 1)'],
+                        borderColor: ['rgba(49, 151, 149, 1)', 'rgba(229, 231, 235, 1)'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                usePointStyle: true,
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.label}: ${context.raw}%`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section[id]');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.toggle('active', link.getAttribute('href').substring(1) === entry.target.id);
+                        });
+                    }
+                });
+            }, { rootMargin: "-50% 0px -50% 0px" });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
         });
     </script>
 </body>
